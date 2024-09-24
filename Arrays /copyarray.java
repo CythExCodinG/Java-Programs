@@ -21,6 +21,6 @@ public class copyarray {
       System.out.print(arr2[i] + " ");
     }
     System.out.println();
-
+    sc.close();
   }
 }
