@@ -15,7 +15,6 @@ public class additionofmatrix {
 
     int[][] arr1 = new int[row][col];
     int[][] arr2 = new int[row][col];
-    int[][] arr3 = new int[row][col];
 
     System.out.println("ENTER ELEMENT OF MATRIX 1:");
     for (int i = 0; i < row; i++) {
@@ -40,7 +39,6 @@ public class additionofmatrix {
       }
       System.out.println();
     }
-    // DISPLAYING MATRIX 2
     System.out.println("MATRIX 2:");
     for (int i = 0; i < row; i++) {
       for (int j = 0; j < col; j++) {
@@ -49,27 +47,13 @@ public class additionofmatrix {
       System.out.println();
     }
 
-    // ADDITION OF 2 MATRIX
-    // System.out.println("ADDITION OF MATRIX 1 AND 2:");
-    // for(int i=0;i<row;i++){
-    // for(int j=0;j<col;j++){
-    // arr3[i][j]=arr1[i][j]+arr2[i][j];
-    // }
-    // }
-    // for(int i=0;i<row;i++){
-    // for(int j=0;j<col;j++){
-    // System.out.print(arr3[i][j]+"\t");
-    // }
-    // System.out.println();
-    // }
-
-    // CHECK IF TWO MATRIX ARE EQUAL OR NOT
-
     int size = row * col;
     int count = 0;
-    // if row 0 and col 0 element are equal then count will increment
+    int flag = 0;
     for (int i = 0; i < row; i++) {
-
+      if (flag == 1) {
+        break;
+      }
       for (int j = 0; j < col; j++) {
         if (arr1[i][j] == arr2[i][j]) {
           if (count == size) {
@@ -78,6 +62,7 @@ public class additionofmatrix {
           count++;
         } else {
           System.out.println("ARRAY 1 AND ARRAY 2 ARE NOT EQUAL");
+          flag = 1;
           break;
         }
 
